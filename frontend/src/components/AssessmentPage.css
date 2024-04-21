@@ -1,0 +1,90 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+ 
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+ 
+  form {
+    margin-top: 20px;
+  }
+ 
+  .question-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+ 
+  .question-container:hover {
+    background-color: #f0f0f0;
+  }
+ 
+  .question {
+    margin-bottom: 10px;
+  }
+ 
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+ 
+  li {
+    margin-bottom: 5px;
+  }
+ 
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+ 
+  button {
+    display: block;
+    /* margin-top: 20px; */
+    /* margin-left: 20px; */
+    /* padding: 10px 20px; */
+    background-color: #5c715e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ 
+  button:hover {
+ 
+    background-color: #5c715e ;
+  }
+ 
+  .alert {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    color: #721c24;
+  }
+ 
+  .welcome-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Align text to center */
+  }
+ 
+  .welcome-container button {
+    display: block;
+    margin-top: 30px; /* Increase top margin */
+    margin-left: auto; /* Set left margin to auto for center alignment */
+    margin-right: auto; /* Set right margin to auto for center alignment */
+    padding: 10px 20px;
+    background-color: #5c715e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ 
