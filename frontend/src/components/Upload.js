@@ -52,7 +52,7 @@ const StudentList = () => {
       };
       console.log(uploadData);
 
-      await axios.post('http://localhost:5000/courses/create', uploadData, {
+      await axios.post('http://lmspwc.eastus.cloudapp.azure.com:5000/courses/create', uploadData, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -62,7 +62,7 @@ const StudentList = () => {
         formData.append(`thumbnail`, thumbnail);
         formData.append(`video`, video);
         formData.append(`courseId`, _id);
-        await axios.post('http://localhost:5000/students/upload', formData, {
+        await axios.post('http://lmspwc.eastus.cloudapp.azure.com:5000/students/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },

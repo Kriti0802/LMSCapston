@@ -9,7 +9,7 @@ const VideoPlayer = () => {
     },[])
   return (
     <div>
-      <video src={`http://localhost:5000/courses/courseVideo/${courseId}_video`} controls style={{ width: '100%', height: 'auto' }} />
+      <video src={`http://lmspwc.eastus.cloudapp.azure.com:5000/courses/courseVideo/${courseId}_video`} controls style={{ width: '100%', height: 'auto' }} />
     </div>
   )
 }

@@ -14,7 +14,7 @@ function CoursePage() {
     const userDataString = localStorage.getItem('user');  
     const userDataJson = JSON.parse(userDataString);  
     setUserData(userDataJson);  
-    fetch('http://localhost:5000/courses')  
+    fetch('http://lmspwc.eastus.cloudapp.azure.com:5000/courses')  
       .then((response) => response.json())  
       .then((data) => setCourses(data))  
       .catch((error) => console.error(error));  
@@ -34,7 +34,7 @@ function CoursePage() {
   
   const handleEnroll = async (courseId) => {  
     const userEmail = JSON.parse(localStorage.getItem('user')).email;  
-    const res = await fetch('http://localhost:5000/courses/enrollment', {  
+    const res = await fetch('http://lmspwc.eastus.cloudapp.azure.com:5000/courses/enrollment', {  
       method: 'POST',  
       headers: {  
         'Content-Type': 'application/json',  
@@ -82,9 +82,9 @@ function CoursePage() {
             {suggestedCourses.map((course) => (  
               <div className="card" key={course._id}>  
                 <div className="card-body">  
-                  <img src={`http://localhost:5000/courses/courseImage/${course._id}_thumbnail`} alt="image" onClick={() => handleThumbnailClick(course._id)} />  
+                  <img src={`http://lmspwc.eastus.cloudapp.azure.com:5000/courses/courseImage/${course._id}_thumbnail`} alt="image" onClick={() => handleThumbnailClick(course._id)} />  
                   {selectedVideo === course._id && (  
-                    <video src={`http://localhost:5000/courses/courseVideo/${course._id}_video`} controls style={{ width: '100%', height: 'auto' }} />  
+                    <video src={`http://lmspwc.eastus.cloudapp.azure.com:5000/courses/courseVideo/${course._id}_video`} controls style={{ width: '100%', height: 'auto' }} />  
                   )}  
                   <div className="card-body">  
                     <h5 className="card-title">{course.name}</h5>  
@@ -92,7 +92,7 @@ function CoursePage() {
                     <p className="card-text">Difficulty: {course.difficulty}</p>  
                     <p className="card-text">Trainer: {course.trainer}</p>  
                   </div>  
-                  <a href={`http://localhost:5000/courses/courseVideo/${course._id}_video`} download className="card-link">Download Video</a>  
+                  <a href={`http://lmspwc.eastus.cloudapp.azure.com:5000/courses/courseVideo/${course._id}_video`} download className="card-link">Download Video</a>  
                   <button className="card-link" onClick={() => handleEnroll(course._id)} to="/cart" style={{color:'white'}}>Enroll</button>  
                 </div>  
               </div>  
@@ -106,14 +106,14 @@ function CoursePage() {
             {courses.map((course) => (  
               <div className="card" key={course._id}>  
                 <div className="card-body">  
-                  <img src={`http://localhost:5000/courses/courseImage/${course._id}_thumbnail`} alt="image" onClick={() => openVideoPlayer(course._id)} />  
+                  <img src={`http://lmspwc.eastus.cloudapp.azure.com:5000/courses/courseImage/${course._id}_thumbnail`} alt="image" onClick={() => openVideoPlayer(course._id)} />  
                   <div className="card-body">  
                     <h5 className="card-title">{course.name}</h5>  
                     <p className="card-text">{course.description}</p>  
                     <p className="card-text">Difficulty: {course.difficulty}</p>  
                     <p className="card-text">Trainer: {course.trainer}</p>  
                   </div>  
-                  <a href={`http://localhost:5000/courses/courseVideo/${course._id}_video`} download className="card-link">Download Video</a>  
+                  <a href={`http://lmspwc.eastus.cloudapp.azure.com:5000/courses/courseVideo/${course._id}_video`} download className="card-link">Download Video</a>  
                   <button className="card-link" onClick={() => handleEnroll(course._id)} to="/cart" style={{color:'white'}}>Enroll</button>  
                 </div>  
               </div>  

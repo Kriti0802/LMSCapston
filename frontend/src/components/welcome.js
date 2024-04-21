@@ -6,7 +6,7 @@ const WelcomePage = () => {
 const [courses, setCourses] = useState([]);
  
 useEffect(() => {
-fetch('http://localhost:5000/courses')
+fetch('http://lmspwc.eastus.cloudapp.azure.com:5000/courses')
 .then(response => response.json())
 .then(data => setCourses(data))
 .catch(error => console.error(error));
@@ -23,7 +23,7 @@ return (
   <Carousel>    
     {courses.map((course, index) => (    
       <Carousel.Item key={index}>    
-        <img className="d-block w-100" src={`http://localhost:5000/courses/courseImage/${course._id}_thumbnail`} alt={`Slide ${index + 1}`} />    
+        <img className="d-block w-100" src={`http://lmspwc.eastus.cloudapp.azure.com:5000/courses/courseImage/${course._id}_thumbnail`} alt={`Slide ${index + 1}`} />    
         <Carousel.Caption>    
           <h5>{course.name}</h5>    
           <p>{course.description}</p>      

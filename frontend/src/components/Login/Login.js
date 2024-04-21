@@ -46,7 +46,7 @@ const Login = ({ setUserData }) => {
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       console.log(user);
-      axios.post("http://localhost:5000/login", user).then((res) => {
+      axios.post("http://lmspwc.eastus.cloudapp.azure.com:5000/login", user).then((res) => {
         console.log(res.data);
         if (res.data.message.trim() === "Email not found" || res.data.message.trim() === "Incorrect password") {  
           toast(res.data.message);  

@@ -17,7 +17,7 @@ const StudentList = () => {
   }, []);  
   
   const fetchStudents = () => {  
-    axios.get('http://localhost:5000/students')  
+    axios.get('http://lmspwc.eastus.cloudapp.azure.com:5000/students')  
       .then((response) => {  
         setStudents(response.data);  
       })  
@@ -38,7 +38,7 @@ const StudentList = () => {
         id: _id,  
       };  
   
-      axios.put(`http://localhost:5000/students/update/${_id}`, updatedStudent)  
+      axios.put(`http://lmspwc.eastus.cloudapp.azure.com:5000/students/update/${_id}`, updatedStudent)  
         .then(() => {  
           fetchStudents();  
           setFname('');  
@@ -58,7 +58,7 @@ const StudentList = () => {
         id: _id,  
       };  
   
-      axios.post('http://localhost:5000/students/add', newStudent)  
+      axios.post('http://lmspwc.eastus.cloudapp.azure.com:5000/students/add', newStudent)  
         .then(() => {  
           fetchStudents();  
           setFname('');  
@@ -73,7 +73,7 @@ const StudentList = () => {
   };  
   
   const handleDelete = (studentId) => {  
-    axios.delete(`http://localhost:5000/students/${studentId}`)  
+    axios.delete(`http://lmspwc.eastus.cloudapp.azure.com:5000/students/${studentId}`)  
       .then(() => {  
         fetchStudents();  
       })  

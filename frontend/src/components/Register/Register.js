@@ -72,7 +72,7 @@ const Register = () => {
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       axios
-        .post("http://localhost:5000/signup", user)
+        .post("http://lmspwc.eastus.cloudapp.azure.com:5000/signup", user)
         .then((res) => {
           toast(res.data.message);
           navigate("/welcome", { replace: true });
@@ -85,7 +85,7 @@ const Register = () => {
 
   useEffect(() => {
 
-    axios.get("http://localhost:5000/getRole").then((response) => {
+    axios.get("http://lmspwc.eastus.cloudapp.azure.com:5000/getRole").then((response) => {
       setUserRole(response.data);
     })
       .catch((error) => {

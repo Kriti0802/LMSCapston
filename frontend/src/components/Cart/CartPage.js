@@ -10,7 +10,7 @@ function CartPage() {
     console.log("calling");
     const fetchCourses = async () => {
       const userMail = JSON.parse(localStorage.getItem('user')).email;
-      const response = await fetch('http://localhost:5000/courses/getEnrolledCourses', {
+      const response = await fetch('http://lmspwc.eastus.cloudapp.azure.com:5000/courses/getEnrolledCourses', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function CartPage() {
 
     // Force a re-render of the component to reflect the updated cart data  
     const userMail = JSON.parse(localStorage.getItem('user')).email;
-    const res = await fetch("http://localhost:5000/courses/derollCourse",{
+    const res = await fetch("http://lmspwc.eastus.cloudapp.azure.com:5000/courses/derollCourse",{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
