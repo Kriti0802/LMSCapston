@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());   
  
 // Connect to MongoDB using the connection string  
-const connectionString = 'mongodb+srv://snehamanna788:Test123@empdb.wqrc8xt.mongodb.net/?retryWrites=true&w=majority&appName=empdb';  
+const connectionString = '';  
 mongoose.connect(connectionString, {  
   // useNewUrlParser: true,  
   // useUnifiedTopology: true,  
