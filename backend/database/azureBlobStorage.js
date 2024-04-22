@@ -1,7 +1,7 @@
 const { BlobServiceClient } = require('@azure/storage-blob');
 
 
-const connectionStrings = 'DefaultEndpointsProtocol=https;AccountName=lmsblob;AccountKey=vYV3dj6UgJAGb3nJEXl8wnSeFOAcb1Bch66bW8Ssk2x+yPEFEmUbJTiQxnOUNLHFIwCNNs8g3/QE+AStufqEug==;EndpointSuffix=core.windows.net';  
+const connectionStrings = '';  
 const containerName = 'myblob';  
   
 const blobServiceClient = BlobServiceClient.fromConnectionString(connectionStrings);  
